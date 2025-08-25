@@ -9,7 +9,7 @@ LOCAL_MODULE := dobby
 include $(PREBUILT_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := Venture
+LOCAL_MODULE := nightwave
 
 LOCAL_CFLAGS := -Wno-error=format-security -fpermissive
 LOCAL_CFLAGS += -fno-rtti -fno-exceptions -g --std=c++2a
