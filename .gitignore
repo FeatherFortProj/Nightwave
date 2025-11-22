@@ -1,0 +1,6 @@
+# build shit
+libs/
+obj/
+
+# VS Code stuff
+.vscode/
