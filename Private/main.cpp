@@ -28,15 +28,15 @@ uintptr_t FindModuleBase(const char* moduleName) {
     return base;
 }
 
-void HookProcessRequest() {
+void SetupRedirect() {
     uintptr_t base = GetModuleBase();
     if (!base) {
         LOGE("Failed to find module base");
         return;
     }
 
-    SetUrlPtr = (SetUrlFn)(base + 0xB98A238);
-    void *ProcessRequestAddr = (void *)(base + 0xB98C690);
+    SetUrlPtr = (SetUrlFn)(base + 0x72511AC);
+    void *ProcessRequestAddr = (void *)(base + 0x6EFF15C);
     if (ProcessRequestAddr) {
         DobbyHook(ProcessRequestAddr, (void *)ProcessRequest, (void **)&OGProcessRequest);
     }    
@@ -51,7 +51,7 @@ void* HookThread(void*) {
     }
 
     SetModuleBase(base);
-    HookProcessRequest();
+    SetupRedirect();
     return nullptr;
 }
 
