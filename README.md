@@ -7,9 +7,9 @@ Nightwave Android is a Fortnite Android redirect and SSL bypass tool, designed t
   - **Android-UE:** Default redirect for 18.40/Latest.
   - **Android-EOS:** EOS redirect (needed for s22+).
 
-# Very skidded offsets guys udud fr
+# Offsets for 18.40+
 ```
-  18.40
+18.40
 ProcessRequest = 0x95FB1C4
 GetUrl = 0x70
 SetUrl = 0x95F8108
@@ -91,4 +91,4 @@ SetUrl = 0x1101C08
 ```
 
 # Credits
-  - **Andrew/Tiva:** For making this redirect omg guys i used tiva's redirect i am a very big skid i did nothing sorry tiva here is the credit u wanted fuck u.
+  - **Andrew/Tiva:** For helping with finding offsets and teaching me how to use ida.
